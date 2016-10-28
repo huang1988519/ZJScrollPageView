@@ -61,7 +61,8 @@ static NSString *const kContentOffsetOffKey = @"contentOffset";
         self.parentViewController = parentViewController;
 
         [self commonInit];
-        [self addNotification];
+        // 收到内存警告移除视图 有BUG
+//        [self addNotification];
     }
     return self;
 }
