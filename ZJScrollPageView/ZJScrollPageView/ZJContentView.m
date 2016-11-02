@@ -274,6 +274,8 @@ static NSString *const kContentOffsetOffKey = @"contentOffset";
     _currentIndex = currentIndex;
     _scrollDirection = ZJScrollPageControllerScrollDirectionNone;
 
+    [self contentViewDidMoveFromIndex:_oldIndex toIndex:_currentIndex progress:1];
+
 }
 
 
