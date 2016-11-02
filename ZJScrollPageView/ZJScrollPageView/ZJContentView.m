@@ -274,15 +274,34 @@ static NSString *const kContentOffsetOffKey = @"contentOffset";
     _currentIndex = currentIndex;
     _scrollDirection = ZJScrollPageControllerScrollDirectionNone;
 
-    [self contentViewDidMoveFromIndex:_oldIndex toIndex:_currentIndex progress:1];
 
 }
 
+/**
+ * 原作者没有考虑直接中断滑动的情况，现在在此处补充点击返回或者进去新界面中断拖动的情况
+ */
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset NS_AVAILABLE_IOS(5_0) {
+    //设置标题
+    NSInteger terminalIndex = (targetContentOffset->x / self.bounds.size.width);
+    [self adjustSegmentTitleOffsetToCurrentIndex:terminalIndex];
+    
+    if (fabs(velocity.x) <= 0) {
+        [self contentViewDidMoveFromIndex:_oldIndex toIndex:_currentIndex progress:1];
+    }
+}
 
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    //设置标题
+    NSInteger terminalIndex = (scrollView.contentOffset.x / self.bounds.size.width);
+    [self adjustSegmentTitleOffsetToCurrentIndex:terminalIndex];
+    
+    [self contentViewDidMoveFromIndex:_oldIndex toIndex:_currentIndex progress:1];
+}
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     _oldOffSetX = scrollView.contentOffset.x;
     self.forbidTouchToAdjustPosition = NO;
     _scrollDirection = ZJScrollPageControllerScrollDirectionNone;
+    
     
 }
 

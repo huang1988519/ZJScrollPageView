@@ -610,8 +610,9 @@
 				TargetAttributes = {
 					4B0C062B1CDC55080079E8F3 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 9G8PCT5S2D;
+						DevelopmentTeam = L5GZZ68F2C;
 						DevelopmentTeamName = "晶 曾 (Personal Team)";
+						ProvisioningStyle = Manual;
 					};
 					4B0C06441CDC55080079E8F3 = {
 						CreatedOnToolsVersion = 7.3;
@@ -860,12 +861,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = L5GZZ68F2C;
 				INFOPLIST_FILE = ZJScrollPageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZeroJ.ZJScrollPageView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.tbreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "48a3f09c-d56a-4c8c-ba35-f1dd9a56b436";
+				PROVISIONING_PROFILE_SPECIFIER = taobao_dev;
 			};
 			name = Debug;
 		};
@@ -875,10 +878,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ZJScrollPageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZeroJ.ZJScrollPageView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.tbreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

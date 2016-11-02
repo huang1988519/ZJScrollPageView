@@ -51,8 +51,9 @@
     // 注意: 一定要避免循环引用!!
     __weak typeof(self) weakSelf = self;
     ZJScrollSegmentView *segment = [[ZJScrollSegmentView alloc] initWithFrame:CGRectMake(0, 64.0, 160.0, 28.0) segmentStyle:style delegate:self titles:self.titles titleDidClick:^(ZJTitleView *titleView, NSInteger index) {
-        
+        weakSelf.contentView.scrollView.panGestureRecognizer.enabled = NO;
         [weakSelf.contentView setContentOffSet:CGPointMake(weakSelf.contentView.bounds.size.width * index, 0.0) animated:YES];
+        weakSelf.contentView.scrollView.panGestureRecognizer.enabled = YES;
         
     }];
     // 自定义标题的样式
