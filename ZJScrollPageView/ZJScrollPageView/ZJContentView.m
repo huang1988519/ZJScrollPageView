@@ -286,6 +286,20 @@ static NSString *const kContentOffsetOffKey = @"contentOffset";
     [self adjustSegmentTitleOffsetToCurrentIndex:terminalIndex];
     
     if (fabs(velocity.x) <= 0) {
+        
+        if (targetContentOffset->x == _oldOffSetX) {// 滚动未完成
+            [self didAppearWithIndex:terminalIndex];
+            [self didDisappearWithIndex:_currentIndex];
+        }
+        else {
+            [self didAppearWithIndex:_currentIndex];
+            [self didDisappearWithIndex:_oldIndex];
+        }
+        // 重置_currentIndex 不触发set方法
+        _currentIndex = terminalIndex;
+        _scrollDirection = ZJScrollPageControllerScrollDirectionNone;
+        
+        
         [self contentViewDidMoveFromIndex:_oldIndex toIndex:_currentIndex progress:1];
     }
 }

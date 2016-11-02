@@ -865,7 +865,7 @@
 				INFOPLIST_FILE = ZJScrollPageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.tbreader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.tbreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "48a3f09c-d56a-4c8c-ba35-f1dd9a56b436";
 				PROVISIONING_PROFILE_SPECIFIER = taobao_dev;
@@ -882,7 +882,7 @@
 				INFOPLIST_FILE = ZJScrollPageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.taobao.tbreader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.tbreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
